@@ -1,0 +1,436 @@
+body {
+  background-color: #f9f9f9;
+  font-family: 'Roboto', sans-serif;
+}
+.navbar {
+  background-color: #ffffff;
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  margin: 0;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.2s ease;
+}
+.navbar .name {
+  color: #000;
+  font-size: 30px;
+  margin-left: 25px;
+}
+.navbar .menu-list {
+  display: inline-flex;
+}
+.menu-list li a {
+  color: #000;
+  font-size: 18px;
+  font-weight: 400;
+  margin-left: 20px;
+  transition: all 0.2s ease;
+}
+.menu-list li a:hover {
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+.icon.cancel-btn {
+position: absolute;
+right: 30px;
+top: 20px;
+}
+@media (max-width: 599px) {
+  .navbar {
+    font-size: clamp(3rem, 1.5vw, 2rem);
+  }
+  .icon {
+    display: block;
+  }
+  .navbar .menu-list {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    height: 550px;
+    width: 100%;
+    max-width: 200px;
+    display: block;
+    background: #ffffff;
+    margin-top: 40px;
+  }
+  .navbar .menu-list li {
+    margin-top: 45px;
+  }
+}
+
+.head-container {
+  background-image: url(/images/karen-massey-photography_the-spa-002.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: 1300px;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  width: auto;
+  margin: 15px;
+}
+.wrapper-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-radius: 5px;
+  margin-top: 70px;
+}
+.wrapper-head::after {
+  content: '';
+  position: absolute;
+  background: #41404c;
+  z-index: -1;
+  height: 100%;
+  inset: 0;
+  opacity: .6;
+  border-radius: 5px;
+}
+.header-left-logo {
+  background-color: transparent;
+  width: 140px;
+  height: 200px;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+.header-right-nav {
+  background-color: transparent;
+  padding: 30px;
+  color: #ffffff;
+}
+.nav {
+  text-align: right;
+}
+.nav ul li{
+  display: inline-block;
+  margin-left: 30px;
+}
+.nav li a::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background-color: #ffffff;
+  margin: auto;
+  display: block;
+}
+.nav li a:hover::after {
+width: 100%;
+transition: width 0.3s linear;
+margin: 5px;
+}
+
+.title {
+text-align: center;
+color: #ffffff;
+font-size: 45px;
+font-weight: 100;
+}
+.container-1 {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 50px;
+}
+
+.sub-title {
+color: #ffffff;
+font-size: 35px;
+}
+.treatment button{
+padding: 15px;
+background-color:#d0a31a;
+font-size: 18px;
+border-radius: 5px;
+cursor: pointer;
+}
+
+@media (max-width: 599px) {
+  .container-1 {
+    display: block;
+  }
+  .title {
+    font-size: small;
+  }
+  .sub-title {
+    font-size: small;
+    text-align: center;
+  }
+  .treatment button {
+    align-items: center;
+    font-size: 15px;
+  }
+  .header-right-nav {
+    font-size: 12px;
+    text-align: right;
+  }
+  .nav ul li {
+  display: block;
+  } 
+  .header-left-logo {
+  width: 75px;
+  height: 55px;
+  }
+  .container-2 {
+    background-attachment: fixed;
+  }
+  .container-2 .box {
+display: grid;
+grid-template-columns: 1fr;
+margin: 0px;
+  }
+
+}
+
+@media (orientation: landscape) and (max-width: 600px) {
+  .container-1 {
+    display: block;
+  }
+  .title {
+    font-size: medium;
+  }
+  .sub-title {
+    font-size: medium;
+    text-align: center;
+  }
+  .treatment button {
+    align-items: center;
+    font-size: 15px;
+  }
+}
+
+
+.container-2 {
+background-color: rgb(255, 255, 255);
+color: black;
+width: 1350px;
+margin: auto;
+display: block;
+margin: auto;
+border-radius: 5px;
+box-shadow: 2px 2px 20px 5px rgb(0%, 0%, 0%, 15%);
+transform: translateY(-550px);
+z-index: 1;
+}
+h3 {
+  font-size: 45px;
+  font-weight: 200;
+  text-align: center;
+}
+.box {
+  display: flex;
+  justify-content: center;
+}
+.box-about {
+  width: 35%;
+  padding: 10px;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  font-size: 18px;
+}
+.box-image img {
+  background-size: cover;
+  padding: 30px;
+}
+.time {
+  transform: translateY(-400px);
+}
+.container-3 {
+  background-image: url(/images/karen-massey-photography_the-spa-008.jpg);
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 400px;
+  color: aliceblue;
+  position: relative;
+  isolation: isolate;
+  border-radius: 5px;
+}
+.container-3::after {
+  content: '';
+  background: #41404c;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: .6;
+  border-radius: 0.5%;
+}
+.container-box-time ul {
+font-size: 30px;
+line-height: 1.2;
+}
+.content {
+  text-align: center;
+  transform: translateY(-270px);
+}
+.content h3 {
+  font-size: 40px;
+}
+.content p {
+  font-size: 20px;
+}
+.container-4 {
+  position: relative;
+  display: flex;
+  width: 100%;
+  gap: 25px;
+  justify-content: space-around;
+  width: 1350px;
+  margin: auto;
+  padding: 20px 20px;
+
+}
+.container-4 h2 {
+  font-size: 20px;
+  color: #000;
+  margin-top: 80px;
+}
+.container-4 p {
+  margin-top: 40px;
+}
+.card-1, .card-2, .card-3, .card-4 {
+  width: 100%;
+  height: 650px;
+  background-color: #fff;
+  box-shadow: 2px 2px 20px 5px rgb(0%, 0%, 0%, 15%);
+  border-radius: 5px;
+  text-align: center;
+}
+.card-1, .card-2, .card-3, .card-4 img {
+  text-align: center;
+}
+.container-4 .button {
+  padding: 10px;
+  background-color:#d0a31a;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 150px;
+  margin: 35px;
+}
+
+.container-5 {
+background-color: #f9f9f9;  
+color: #000;
+display: grid;
+grid-template-columns: 1fr 3fr;
+grid-template-rows: auto;
+transform: translateY(-100px);
+}
+.container-5-left-side {
+  width: 650px;
+  height: 400px;
+  background-color: #ffffff;
+  transform: translateX(100px) translateY(65px);
+  border-radius: 1%;
+  box-shadow: 0px 0px 30px 0.5px lightgrey;
+  padding: 40px;
+  font-size: 18px;
+  display: block;
+}
+.container-5-left-side h2 {
+color: #000;
+text-align: left;
+}
+
+.container-5-left-side button {
+  background-color: #d0a31a;
+  height: 50px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.container-5-right-side img {
+border-radius: 5px;
+}
+
+.container-6 {
+  display: flex;
+  flex-direction: column;
+  /* background-color: #ffffff; */
+  gap: 8px;
+  color: #ffffff;
+  line-height: 2.2;
+}
+
+.container-6 .first {
+  color: #ffffff;
+  display:inline-block;
+  text-align: end;
+  padding: 20px;
+  background-color: #71777e;
+}
+
+.second {
+  background-color: #71777e;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  padding: 50px;
+}
+.second .container-6-title {
+  font-size: 20px;
+  text-align: left;
+}
+.footWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+}
+@media screen {
+  .footWrapper {
+    flex-direction: column;
+  }
+  .footerConteinerTop {
+    display: block;
+  }
+}
+.footerConteinerTop {
+  display: flex;
+  justify-content: space-between;
+}
+.contactsFooter ul li{
+  display: inline-block;
+  padding: 5px;
+}
+.icons span {
+  font-size: 28px;
+  padding: 5px;
+}
+.footerConteinerBottom {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 599px) {
+  .box {
+    display: block;
+    width: auto;
+    text-align: left;
+    margin: 20px;
+  }
+  .container-4 {
+ display: block;
+width: 100%;
+flex-direction: column;
+  }
+.wrapper-head {
+  text-align: left;
+}
+.wrapper {
+  display: block;
+  text-align: left;
+}
+} 
+
